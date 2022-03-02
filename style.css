@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .2s linear;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.box-container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(img/geometrical.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.box-container .box{
+    width: 700px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px #0009;
+    backdrop-filter: blur(15px);
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.box-container .box .image{
+    padding: 2rem;
+    margin-right: 2rem;
+    border-radius: 0 50px 50px 0;
+    background-color: #fff2;
+    height:270px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box-container .box .image img{
+    width: 15rem;
+    padding: 1rem;
+    border-radius: 0 1rem 0 1rem;
+    box-shadow: 0 0 10px 10px #fff3;
+    background-color: rgb(255, 255, 255);
+}
+
+.box-container .box .content .title{
+    color: #fff;
+    padding: 5px 0;
+    font-size: 33px;
+    text-transform: capitalize;
+}
+
+.box-container .box .content .post{
+    display: block;
+    color: #fff9;
+    margin-bottom: 1rem;
+}
+
+.box-container .box .content a{
+    display: block;
+    color: #fff9;
+    font-size: 1.2rem;
+}
+
+.box-container .box .content .location{
+    text-decoration: none;
+}
+
+.box-container .box .content a i{
+    color: #fff;
+    padding: 7px;
+}
+
+.box-container .box .content a:hover{
+    color: #fff;
+}
+
+.box-container .box .share{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translate(0, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow:column;
+    background-color: #fff3;
+    border-radius: 50px;
+    height: 220px;
+    width: 45px;
+}
+
+.box-container .box .share a{
+    margin: 0.45rem;
+    color: rgba(255, 255, 255, 0.63);
+    font-size: 1.5rem;
+}
+
+.box-container .box .share a:hover{
+    color: #fff;
+}
+
+@media (max-width:768px) {
+    .box-container .box{
+        flex-flow: column;
+        padding-bottom: 100px;
+        margin: 20px;
+        width: 310px;
+    }
+
+    .box-container .box .image{
+       margin-right: 0;
+       margin-bottom: 20px;
+       border-radius: 0 0 50px 50px; 
+    }
+
+    .box-container .box .share{
+        left: 50%;
+        top: 87%;
+        transform: translate(-50%, 0);
+        height: 45px;
+        width: 240px;
+        flex-flow: row;
+    }
+
+}
